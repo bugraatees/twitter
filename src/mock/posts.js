@@ -10,7 +10,7 @@ export const posts = [
 				{
 					id: 1,
 					text: 'Galatasaray',
-					votes:55
+					votes: 55
 				},
 				{
 					id: 2,

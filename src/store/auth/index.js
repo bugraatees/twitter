@@ -4,7 +4,7 @@ const initialState = {
     currentAccount:{
         id:1,
         username:"bugraates",
-        fullname:"BugraAtes",
+        fullname:"Bugra Ates",
         avatar:'https://cdn.iconscout.com/icon/free/png-256/free-avatar-380-456332.png'
     },
     accounts:[
