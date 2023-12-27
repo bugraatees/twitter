@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-body {
-   @apply bg-black text-white text-[15px] ;
+:root {
+  font-size: var(--font-size);
 }
 
+body {
+   @apply bg-[color:var(--background-primary)] text-[color:var(--color-base)] text-[0.938rem] ;
+}
+
+.shadow-box {
+  box-shadow: var (--box-shadow);
+}
 /* 
 genişlik = 1265px
 sol sidebar = 275px 

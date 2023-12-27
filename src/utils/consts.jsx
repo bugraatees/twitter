@@ -1,3 +1,6 @@
+import store from "../store"
+
+
 export const mainMenu = [
 	{
 		path: '/',
@@ -155,6 +158,9 @@ export const mainMenu = [
 		}
 	},
     {
+		path: () => {
+			return `/${store.getState()?.auth?.currentAccount?.username}`
+		},
 		title: 'Profil',
 		icon: {
 			active: (
@@ -175,4 +181,83 @@ export const mainMenu = [
 			)
 		}
 	}
+]
+
+export const topics = [
+	{
+		title: 'Türkiye tarihinde gündemde',
+		topic: {
+			type:'tag',
+			value:'dilanpolat',
+		}
+	},
+	{
+		title: 'Türkiye tarihinde gündemde',
+		topic: {
+			type:'query',
+			value:'Starlink',
+		},
+		postCount:13663
+	},
+	{
+		title: 'Türkiye tarihinde gündemde',
+		topic: {
+			type:'query',
+			value:'Starlink',
+		},
+		postCount:13663
+	},
+
+	{
+		title: 'Türkiye tarihinde gündemde',
+		topic: {
+			type:'query',
+			value:'Starlink',
+		},
+		postCount:13663
+	},
+
+	{
+		title: 'Türkiye tarihinde gündemde',
+		topic: {
+			type:'query',
+			value:'Starlink',
+		},
+		postCount:13663
+	},
+]
+
+export const colors = [
+	{
+		primary: '#1d9bf0',
+		secondary: '#8ecdf8'
+	},
+	{
+		primary: '#ffd400',
+		secondary: '#ffea80'
+	},
+	{
+		primary: '#f91880',
+		secondary: '#fc8cc0'
+	},
+	{
+		primary: '#7856ff',
+		secondary: '#bcabff'
+	},
+	{
+		primary: '#ff7a00',
+		secondary: '#ffbd80'
+	},
+	{
+		primary: '#00ba7c',
+		secondary: '#80ddbe'
+	}
+]
+
+export const fontSizes = [
+	14,
+	15,
+	16,
+	18,
+	19
 ]

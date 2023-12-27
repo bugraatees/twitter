@@ -3,11 +3,15 @@ import classNames from "classnames";
 import { mainMenu } from "../../../../utils/consts";
 import More from "./more";
 import New from "./new";
+import { useAccount } from "../../../../store/auth/hooks";
 
 
 export default function Menu() {
+    
+    const account = useAccount()
+    
     return (
-        <nav className="mt-0.5 mb-1" >
+        <nav className="mt-0.5 mb-1" key={account.id} >
 
             {mainMenu.map((menu, index) => (
                 <NavLink key={index} to={typeof menu.path === 'function' ? menu.path() : menu.path} className="py-[0.188rem] block group">
@@ -19,7 +23,7 @@ export default function Menu() {
                             <div className="w-[1.641rem] h-[1.641rem] relative">
                                 {menu?.notification && (
                                     <span
-                                        className="w-[1.125rem] h-[1.125rem] rounded-full bg-[color:var(--color-primary)] text-white border border-[color:var(--background-primary)] absolute -top-1.5 -right-1 flex items-center justify-center text-[0.688rem]">
+                                        className="w-[1.125rem] h-[1.125rem] rounded-full bg-[color:var(--color-primary)] text-[color:var(--background-primary)] border border-[color:var(--background-primary)] absolute -top-1.5 -right-1 flex items-center justify-center text-[0.688rem]">
                                         {menu?.notification}
                                     </span>
                                 )}
